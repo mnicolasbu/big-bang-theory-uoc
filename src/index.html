@@ -1,34 +1,138 @@
 <!doctype html>
 
-<html>
+<html lang="es">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Guía de The Big Bang Theory: sinopsis, personajes y datos de la serie."
+    />
     <link rel="stylesheet" type="text/css" href="./assets/styles/main.scss" />
     <!-- do not remove this line! -->
-    <title>UOC Boilerplate</title>
+    <title>The Big Bang Theory | Serie recomendada</title>
   </head>
   <body>
-    <div class="uoc-container">
-      <picture>
-        <source
-          srcset="./assets/images/logo.png?as=webp&width=350"
-          type="image/webp"
-        />
-        <img
-          src="./assets/images/logo.png?width=350"
-          alt="Universitat Oberta de Catalunya"
-          class="uoc-logo"
-        />
-      </picture>
-      <h1 class="uoc-title">Hello, UOC!</h1>
-      <p>
-        This is a starter template for the Advanced HTML and CSS Tools courses
-        from the Master's Program in Multimedia Applications and the Master's
-        Program in Web App and Website Development at the Universitat Oberta de
-        Catalunya.
-      </p>
-    </div>
+    <header class="header">
+      <a class="header__brand" href="#inicio">
+        <i class="fas fa-atom" aria-hidden="true"></i>
+        <span class="header__name">Big Bang Theory</span>
+      </a>
+      <nav class="nav" aria-label="Navegación principal">
+        <ul class="nav__list">
+          <li class="nav__item">
+            <a class="nav__link" href="#sinopsis">Sinopsis</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link" href="#personajes">Personajes</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link" href="#ficha">Ficha</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link" href="#opinion">Por qué verla</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero" id="inicio">
+        <h1 class="hero__title">The Big Bang Theory</h1>
+        <p class="hero__subtitle">
+          Una serie que recomiendo: ciencia, amistad y mucho humor friki.
+        </p>
+        <a class="button button--primary" href="#sinopsis">
+          Descubre la serie
+        </a>
+      </section>
+
+      <section class="section" id="sinopsis">
+        <h2 class="section__title">Sinopsis</h2>
+        <p class="section__text">
+          [Escribe aquí, con tus propias palabras, de qué trata la serie:
+          dos físicos compañeros de piso y su nueva vecina.]
+        </p>
+        <p class="section__text">
+          [Segundo párrafo: qué te gusta del tono de la serie.]
+        </p>
+      </section>
+
+      <section class="section section--alt" id="personajes">
+        <h2 class="section__title">Personajes principales</h2>
+        <div class="cards">
+          <article class="card">
+            <i class="card__icon fas fa-atom" aria-hidden="true"></i>
+            <h3 class="card__title">Sheldon Cooper</h3>
+            <p class="card__text">[Tu descripción, 1-2 frases.]</p>
+          </article>
+          <article class="card">
+            <i class="card__icon fas fa-flask" aria-hidden="true"></i>
+            <h3 class="card__title">Leonard Hofstadter</h3>
+            <p class="card__text">[Tu descripción, 1-2 frases.]</p>
+          </article>
+          <article class="card">
+            <i class="card__icon fas fa-masks-theater" aria-hidden="true"></i>
+            <h3 class="card__title">Penny</h3>
+            <p class="card__text">[Tu descripción, 1-2 frases.]</p>
+          </article>
+          <article class="card">
+            <i class="card__icon fas fa-rocket" aria-hidden="true"></i>
+            <h3 class="card__title">Howard Wolowitz</h3>
+            <p class="card__text">[Tu descripción, 1-2 frases.]</p>
+          </article>
+          <article class="card">
+            <i class="card__icon fas fa-moon" aria-hidden="true"></i>
+            <h3 class="card__title">Raj Koothrappali</h3>
+            <p class="card__text">[Tu descripción, 1-2 frases.]</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section" id="ficha">
+        <h2 class="section__title">Ficha técnica</h2>
+        <dl class="facts">
+          <div class="facts__item">
+            <dt class="facts__label">
+              <i class="fas fa-tv" aria-hidden="true"></i> Cadena
+            </dt>
+            <dd class="facts__value">CBS</dd>
+          </div>
+          <div class="facts__item">
+            <dt class="facts__label">
+              <i class="fas fa-calendar" aria-hidden="true"></i> Emisión
+            </dt>
+            <dd class="facts__value">2007 – 2019</dd>
+          </div>
+          <div class="facts__item">
+            <dt class="facts__label">
+              <i class="fas fa-layer-group" aria-hidden="true"></i> Temporadas
+            </dt>
+            <dd class="facts__value">12</dd>
+          </div>
+          <div class="facts__item">
+            <dt class="facts__label">
+              <i class="fas fa-pen" aria-hidden="true"></i> Creadores
+            </dt>
+            <dd class="facts__value">Chuck Lorre y Bill Prady</dd>
+          </div>
+        </dl>
+      </section>
+
+      <section class="section section--alt" id="opinion">
+        <h2 class="section__title">Por qué te la recomiendo</h2>
+        <ul class="reasons">
+          <li class="reasons__item">[Tu motivo 1]</li>
+          <li class="reasons__item">[Tu motivo 2]</li>
+          <li class="reasons__item">[Tu motivo 3]</li>
+        </ul>
+        <blockquote class="quote">
+          <p class="quote__text">¡Bazinga!</p>
+          <footer class="quote__author">Sheldon Cooper</footer>
+        </blockquote>
+      </section>
+    </main>
+
     <include src="./views/footer.html"></include>
     <script type="module" src="./assets/scripts/main.js"></script>
     <!-- do not remove this line! -->
