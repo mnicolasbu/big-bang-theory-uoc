@@ -9,6 +9,7 @@
       content="Guía de The Big Bang Theory: sinopsis, personajes y datos de la serie."
     />
     <link rel="stylesheet" type="text/css" href="./assets/styles/main.scss" />
+    <link rel="icon" type="image/png" href="./assets/images/logo_icono.png" />
     <!-- do not remove this line! -->
     <title>The Big Bang Theory | Serie recomendada</title>
   </head>
@@ -21,13 +22,19 @@
       <nav class="nav" aria-label="Navegación principal">
         <ul class="nav__list">
           <li class="nav__item">
+            <a class="nav__link" href="#trailer">Tráiler</a>
+          </li>
+          <li class="nav__item">
             <a class="nav__link" href="#sinopsis">Sinopsis</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link" href="#galeria">Galería</a>
           </li>
           <li class="nav__item">
             <a class="nav__link" href="#personajes">Personajes</a>
           </li>
           <li class="nav__item">
-            <a class="nav__link" href="#ficha">Ficha</a>
+            <a class="nav__link" href="#datos">Datos</a>
           </li>
           <li class="nav__item">
             <a class="nav__link" href="#opinion">Por qué verla</a>
@@ -47,7 +54,20 @@
         </a>
       </section>
 
-      <section class="section" id="sinopsis">
+      <section class="video" id="trailer">
+        <h2 class="video__title">Tráiler de la serie</h2>
+        <div class="video__wrapper">
+          <iframe
+            class="video__frame"
+            src="https://www.youtube.com/embed/_uQXxvZ3afQ"
+            title="Tráiler de The Big Bang Theory en español"
+            loading="lazy"
+            allowfullscreen
+          ></iframe>
+        </div>
+      </section>
+
+      <section class="section section--alt" id="sinopsis">
         <h2 class="section__title">Sinopsis</h2>
         <p class="section__text">De un grupo de cuatro amigos científicos, Leonard y Sheldon son dos físicos brillantes que comparten piso en Pasadena. 
           Su vida de cómics, ciencia y rutinas estrictas se pone patas arriba cuando Penny, una chica normal y corriente, se muda al piso de enfrente.
@@ -57,6 +77,57 @@
           Por ejemplo, cuando Sheldon Cooper aparece en varios capítulos diciendo <q class="section__quote">No estoy loco, mi madre me hizo pruebas</q>.
         </p>
         <i class="section__icon fa-solid fa-face-laugh-squint" aria-hidden="true"></i>
+      </section>
+
+      <section class="gallery" id="galeria">
+        <h2 class="gallery__title">Galería</h2>
+        <div class="gallery__viewport">
+          <img class="gallery__slide" src="./assets/images/imagen_carrusel_1.jpg" alt="Imagen del plató del piso de Leonard y Sheldon" loading="lazy">
+          <img class="gallery__slide" src="./assets/images/imagen_carrusel_2.jpg" alt="Imagen del plató tienda de cómics de Stuart" loading="lazy">
+          <img class="gallery__slide" src="./assets/images/imagen_carrusel_3.jpg" alt="Imagen de los actores" loading="lazy">
+          <img class="gallery__slide" src="./assets/images/imagen_carrusel_4.jpg" alt="Imagen del plató del comedor de la universidad" loading="lazy">
+        </div>
+        <details class="gallery__credits">
+          <summary class="gallery__credits-button">Créditos de las imágenes</summary>
+          <div class="gallery__table-wrapper">
+            <table class="gallery__table">
+              <thead>
+                <tr>
+                  <th class="gallery__cell gallery__cell--head">Imagen</th>
+                  <th class="gallery__cell gallery__cell--head">Título</th>
+                  <th class="gallery__cell gallery__cell--head">Autor</th>
+                  <th class="gallery__cell gallery__cell--head">Tipo de Licencia</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="gallery__cell">1</td>
+                  <td class="gallery__cell"><a href="https://commons.wikimedia.org/wiki/File:The_Big_Bang_Theory_(Burbank)_July_2022_(4).JPG">The Big Bang Theory (Burbank)</a></td>
+                  <td class="gallery__cell">Benoît Prieur</td>
+                  <td class="gallery__cell"><a href="https://creativecommons.org/publicdomain/zero/1.0/">CC0 1.0 Universal (dominio público)</a></td>
+                </tr>
+                <tr>
+                  <td class="gallery__cell">2</td>
+                  <td class="gallery__cell"><a href="https://commons.wikimedia.org/wiki/File:The_Big_Bang_Theory,_Comic_Book_Store_%22The_Comic_Center_of_Pasadena%22_(6196384919).jpg">The Big Bang Theory, Comic Book Store "The Comic Center of Pasadena"</a></td>
+                  <td class="gallery__cell">Chester</td>
+                  <td class="gallery__cell"><a href="https://creativecommons.org/licenses/by/2.0/">CC BY 2.0 (Atribución)</a></td>
+                </tr>
+                <tr>
+                  <td class="gallery__cell">3</td>
+                  <td class="gallery__cell"><a href="https://commons.wikimedia.org/wiki/File:Cast_of_The_Big_Bang_Theory_05.jpg">Cast of The Big Bang Theory</a></td>
+                  <td class="gallery__cell">therainstopped</td>
+                  <td class="gallery__cell"><a href="https://creativecommons.org/licenses/by/2.0/">CC BY 2.0 (Atribución)</a></td>
+                </tr>
+                <tr>
+                  <td class="gallery__cell">4</td>
+                  <td class="gallery__cell"><a href="https://commons.wikimedia.org/wiki/File:The_Big_Bang_Theory_(Burbank)_July_2022_(2).JPG">The Big Bang Theory (Burbank)</a></td>
+                  <td class="gallery__cell">Benoît Prieur</td>
+                  <td class="gallery__cell"><a href="https://creativecommons.org/publicdomain/zero/1.0/">CC0 1.0 Universal (dominio público)</a></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </details>
       </section>
 
       <section class="section section--alt" id="personajes">
@@ -90,8 +161,8 @@
         </div>
       </section>
 
-      <section class="section" id="ficha">
-        <h2 class="section__title">Ficha técnica</h2>
+      <section class="section" id="datos">
+        <h2 class="section__title">Datos de la serie</h2>
         <dl class="facts">
           <div class="facts__item">
             <dt class="facts__label">

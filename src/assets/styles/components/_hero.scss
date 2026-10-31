@@ -6,11 +6,15 @@
   padding: f.space(10) f.space(3);
   text-align: center;
   color: v.$color-white;
-  background: linear-gradient(
-    135deg,
-    v.$color-primary,
-    f.shade(v.$color-primary, 45%)
-  );
+  background-image:
+    linear-gradient(
+      135deg,
+      rgb(0 0 0 / 65%),
+      rgb(0 0 0 / 80%)
+    ),
+    url("../images/imagen_carrusel_1.jpg");
+  background-position: center;
+  background-size: cover;
 
   &__title {
     margin: 0 0 f.space(2);
@@ -26,5 +30,6 @@
     max-width: 40rem;
     margin: 0 auto f.space(4);
     font-size: f.rem(18);
+    text-shadow: 0 1px 4px rgb(0 0 0 / 60%);
   }
 }
