@@ -1,4 +1,4 @@
-# The Big Bang Theory · Serie recomendada
+# Proyecto web: The Big Bang Theory
 
 Web responsive de una sola página sobre *The Big Bang Theory*, hecha para la PEC 1 de Herramientas HTML y CSS II (M4.258) de la UOC.
 
