@@ -1,67 +1,41 @@
-# UOC Boilerplate
+# The Big Bang Theory · Serie recomendada
 
-UOC Boilerplate is a starter template for the HTML and CSS Tools courses from the [Master's Program in Multimedia Applications](https://estudis.uoc.edu/ca/masters-universitaris/aplicacions-multimedia/presentacio) and the [Master's Program in Web App and Website Development](https://estudis.uoc.edu/ca/masters-universitaris/desenvolupament-llocs-aplicacions-web/presentacio) at the [Universitat Oberta de Catalunya](https://www.uoc.edu). It aims to provide a basic, modern frontend web development starter pack based on Parcel and including a Sass compiler, an ES6 transpiler, minifiers, an image transformer, and development tools.
+Web responsive de una sola página sobre *The Big Bang Theory*, hecha para la PEC 1 de Herramientas HTML y CSS II (M4.258) de la UOC.
 
-This is the 3.x version of UOC Boilerplate, available since the UOC 2020-2 semester.
+- **Web publicada:** https://big-bang-theory-uoc.netlify.app/
+- **Repositorio:** https://github.com/mnicolasbu/big-bang-theory-uoc
 
-## Requirements
+## Autor
 
-[Node.js](http://nodejs.org/) >= 18.x
+- **Nombre:** Manuel Nicolás Budesca
+- **GitHub:** [mnicolasbu](https://github.com/mnicolasbu)
+- **Asignatura:** Herramientas HTML y CSS II (M4.258), UOC
+- **Entrega:** PEC 1
 
-## Getting started
+## Tecnologías
+- UOC Boilerplate v3.14.0 y Parcel
+- Sass (SCSS) con variables, anidado, funciones propias, parciales y `@use`
+- Metodología BEM
+- Stylelint con una regla propia que obliga a usar BEM
+- Configuración de Stylelint en `.stylelintrc.json` (reglas estándar para SCSS más la regla BEM `selector-class-pattern`)
 
-Clone this repository with `git clone`, or download a .zip file using the top right green button.
+## Estructura de estilos SCSS
 
-Using the Terminal, navigate to the project folder and run `npm install`.
+- `src/assets/styles/components/`: componentes BEM (`_button`, `_card`, `_facts`, `_footer`, `_header`, `_hero`, `_nav`, `_opinion`, `_section`).
+- `src/assets/styles/layouts/`: estilos globales de la página (`_home.scss`).
+- `src/assets/styles/_dependencies.scss`: importa las dependencias de npm (Font Awesome).
+- `src/assets/styles/_functions.scss`: funciones propias (`rem`, `tint`, `shade`, `space`).
+- `src/assets/styles/_mixins.scss`: mixin `up` para media queries mobile first.
+- `src/assets/styles/_variables.scss`: colores, tipografías, anchos y breakpoints.
+- `src/assets/styles/main.scss`: fichero principal, solo importa los parciales con `@use`.
 
-## Features
+## Cómo ejecutarlo
 
-- Uses [Parcel v2](https://parceljs.org) module bundler.
-- NPM scripts for fast development and production build (see Commands below).
-
-### Stylesheets
-
-- [Sass/SCSS](https://sass-lang.com) to CSS compilation (`@parcel/transformer-sass`).
-- Transpilation of modern CSS synthax to support older bvrowsers, based on `browserslist`, including vendor prefixing and synthax lowering, with [PostCSS](https://postcss.org/) (`@parcel/transformer-postcss`).
-- Minification and optimization of CSS files on production builds with [`lightningcss`](https://github.com/parcel-bundler/lightningcss) (`@parcel/optimizer-css`).
-
-### HTML
-
-- Minification and optimization of CSS files on production builds [`htmlnano`](https://github.com/posthtml/htmlnano) (`@parcel/optimizer-htmlnano`).
-- [PostHTML](https://github.com/posthtml/posthtml) (`@parcel/transformer-posthtml`) features:
-  - Include partial HTML files with [`posthtml-include`](https://github.com/posthtml/posthtml-include).
-
-### Scripts
-
-- Transpilation of modern JavaScript synthax to support older browsers, based on `browserslist`, with with [Babel](https://babeljs.io/) (`@parcel/transformer-babel`).
-- Minification and optimization of JS code with [SWC](https://swc.rs/) (`@parcel/optimizer-swc`).
-
-### Images
-
-- Image transformation with [`sharp`](https://sharp.pixelplumbing.com/) ([`@parcel/transformer-image`](https://parceljs.org/recipes/image/)).
-
-### Development
-
-- Development server launch and live reloading on file changes.
-- Friendly error reporting.
-
-## How to use this boilerplate
-
-Content lives inside the `src/` folder. If you do not want to change the configuration or are unsure about what you are doing, do not edit files outside the `src/` folder.
-
-Always run the following commands during the development stage and for production builds. Please note that it is expected that all projects built with this boilerplate are compiled using `npm run build` before they are published.
-
-### Commands
-
-| Command         | Description                                                                                                                                                                                                                                                                                                                                                         |
+| Comando         | Descripción                                                                                                                                                                                                                                                                                                                                                         |
 | --------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `npm run dev`   | Runs a local web server for development and opens the browser to display it. Automatically compiles styles and scripts whenever a file in `src/` is changed, and live reloads the browser. This is what _must be run_ on the development stage.                                                                                                                     |
-| `npm run build` | Compiles and minifies and optimizes the files in the assets folder. The generated compiled and optimized files are located in the `dist/` folder. This is what _must be run_ before publishing the project. This is also the build command to be run by external deployment services such as Netlify. The publishable files are then located in the `dist/` folder. |
-| `npm run clean` | Deletes the current `/dist` folder and cache folders.                                                                                                                                                                                                                                                                                                               |
-| `npm run test`  | Displays a success message if everything is working as expected.                                                                                                                                                                                                                                                                                                    |
-
-## Need help? / Want to help out?
-
-Feel free to create a [new issue](https://github.com/uoc-advanced-html-css/uoc-boilerplate/issues/new/) or drop me a line at jorditarrida@uoc.edu.
-
-Are you using this Boilerplate for your projects or for educational purposes? I would love to hear about it!
+| `npm install`   | Instala las dependencias del proyecto. Hay que ejecutarlo una sola vez, después de clonar el repositorio.                                                                                                                     |
+| `npm run dev`   | Revisa los estilos con Stylelint y arranca un servidor local de desarrollo en `http://localhost:8123`. Compila estilos y scripts automáticamente cuando cambia un fichero de `src/`. Es lo que se ejecuta mientras se desarrolla.                                                                                                                     |
+| `npm run lint`   | Revisa los ficheros `.scss` con Stylelint y avisa si algo no cumple las reglas de estilo o la nomenclatura BEM.                                                                                                                     |
+| `npm run build` | Ejecuta `lint`, borra `dist/` y las cachés, y compila y optimiza los ficheros. El resultado queda en la carpeta `dist/`. Es el comando que usa Netlify para publicar la web. |
+| `npm run clean` | Elimina la carpeta `/dist` y las carpetas de caché.                                                                                                                                                                                                                                                                                                               |
+| `npm run test`  | Muestra un mensaje de éxito si todo funciona como se espera.                                                                                                                                                                                                                                                                                                    |
