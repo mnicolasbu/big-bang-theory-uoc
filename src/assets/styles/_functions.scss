@@ -1,0 +1,22 @@
+@use "sass:math";
+@use "sass:color";
+
+// px -> rem (base 16)
+@function rem($px, $base: 16) {
+  @return math.div($px, $base) * 1rem;
+}
+
+// Aclara un color mezclándolo con blanco
+@function tint($color, $percent) {
+  @return color.mix(#fff, $color, $percent);
+}
+
+// Oscurece un color mezclándolo con negro
+@function shade($color, $percent) {
+  @return color.mix(#000, $color, $percent);
+}
+
+// Espaciado basado en múltiplos de 0.5rem
+@function space($n) {
+  @return $n * 0.5rem;
+}

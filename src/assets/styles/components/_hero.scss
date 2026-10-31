@@ -1,0 +1,30 @@
+@use "../variables" as v;
+@use "../functions" as f;
+@use "../mixins" as m;
+
+.hero {
+  padding: f.space(10) f.space(3);
+  text-align: center;
+  color: v.$color-white;
+  background: linear-gradient(
+    135deg,
+    v.$color-primary,
+    f.shade(v.$color-primary, 45%)
+  );
+
+  &__title {
+    margin: 0 0 f.space(2);
+    font-family: v.$font-heading;
+    font-size: f.rem(34);
+
+    @include m.up(v.$breakpoint-md) {
+      font-size: f.rem(56);
+    }
+  }
+
+  &__subtitle {
+    max-width: 40rem;
+    margin: 0 auto f.space(4);
+    font-size: f.rem(18);
+  }
+}

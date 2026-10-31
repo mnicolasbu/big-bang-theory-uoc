@@ -1,12 +1,18 @@
-@use "sass:color";
+// Paleta (inspirada en la camiseta de Sheldon y el átomo)
+$color-primary: #1e3a8a;
+$color-accent: #f5b301;
+$color-dark: #1b1f2a;
+$color-light: #f2f5fb;
+$color-white: #fff;
 
-$font-family-sans-serif:
-  -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue",
-  Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-$font-family-serif: "Georgia", "Times New Roman", serif;
+// Tipografía
+$font-sans: "Segoe UI", roboto, arial, sans-serif;
+$font-heading: georgia, "Times New Roman", serif;
 
-$uoc-corporate: #000078;
-$uoc-masterbrand: #73edff;
-$uoc-bg: color.scale($uoc-masterbrand, $lightness: 70%);
+// Layout
+$content-width: 70rem;
+$radius: 0.75rem;
 
-$mqMinWidth: 420px;
+// Breakpoints (mobile first)
+$breakpoint-md: 768px;
+$breakpoint-lg: 1024px;

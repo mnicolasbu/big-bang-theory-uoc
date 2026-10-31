@@ -1,0 +1,27 @@
+@use "../variables" as v;
+@use "../functions" as f;
+
+.nav {
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: f.space(1);
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  &__link {
+    display: block;
+    padding: f.space(1) f.space(1.5);
+    border-radius: v.$radius;
+    color: f.tint(v.$color-primary, 85%);
+    text-decoration: none;
+
+    &:hover,
+    &:focus {
+      color: v.$color-white;
+      background-color: f.shade(v.$color-primary, 25%);
+    }
+  }
+}

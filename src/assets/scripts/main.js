@@ -1,16 +1,4 @@
 /**
- * Import dependencies from node_modules
- * see commented examples below
+ * Scripts de la web de The Big Bang Theory.
+ * Esta PEC no necesita JavaScript propio.
  */
-
-// import 'some-node-module';
-// import SomeModule from 'some-node-module';
-
-/**
- * Write any other JavaScript below
- */
-
-+(function () {
-  const university = "UOC";
-  console.log(`Hello, ${university}!`);
-})();

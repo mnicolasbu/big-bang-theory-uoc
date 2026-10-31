@@ -1,0 +1,24 @@
+@use "../variables" as v;
+@use "../functions" as f;
+
+.button {
+  display: inline-block;
+  padding: f.space(1.5) f.space(4);
+  border-radius: v.$radius;
+  font-weight: 700;
+  text-decoration: none;
+  transition:
+    transform 0.2s,
+    background-color 0.2s;
+
+  &--primary {
+    color: v.$color-dark;
+    background-color: v.$color-accent;
+
+    &:hover,
+    &:focus {
+      background-color: f.shade(v.$color-accent, 15%);
+      transform: translateY(-2px);
+    }
+  }
+}

@@ -1,0 +1,38 @@
+@use "../variables" as v;
+@use "../functions" as f;
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
+  gap: f.space(3);
+  max-width: v.$content-width;
+  margin: 0 auto;
+}
+
+.card {
+  padding: f.space(3);
+  border-radius: v.$radius;
+  text-align: center;
+  background-color: v.$color-white;
+  box-shadow: 0 4px 10px rgb(0 0 0 / 10%);
+  transition: transform 0.2s;
+
+  &:hover {
+    transform: translateY(-4px);
+  }
+
+  &__icon {
+    font-size: f.rem(36);
+    color: v.$color-primary;
+  }
+
+  &__title {
+    margin: f.space(1) 0;
+    font-family: v.$font-heading;
+    color: v.$color-primary;
+  }
+
+  &__text {
+    margin: 0;
+  }
+}

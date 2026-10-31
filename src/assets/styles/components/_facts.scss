@@ -1,0 +1,35 @@
+@use "../variables" as v;
+@use "../functions" as f;
+@use "../mixins" as m;
+
+.facts {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: f.space(3);
+  max-width: v.$content-width;
+  margin: 0 auto;
+
+  @include m.up(v.$breakpoint-md) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @include m.up(v.$breakpoint-lg) {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  &__item {
+    padding: f.space(2);
+    border-left: 4px solid v.$color-accent;
+    background-color: v.$color-light;
+  }
+
+  &__label {
+    font-weight: 700;
+    color: v.$color-primary;
+  }
+
+  &__value {
+    margin: f.space(0.5) 0 0;
+    font-size: f.rem(20);
+  }
+}

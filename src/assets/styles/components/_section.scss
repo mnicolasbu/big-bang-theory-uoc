@@ -1,0 +1,37 @@
+@use "../variables" as v;
+@use "../functions" as f;
+
+.section {
+  padding: f.space(8) f.space(3);
+
+  &--alt {
+    background-color: v.$color-light;
+  }
+
+  &__title {
+    max-width: v.$content-width;
+    margin: 0 auto f.space(4);
+    font-family: v.$font-heading;
+    font-size: f.rem(28);
+    text-align: center;
+    color: v.$color-primary;
+  }
+
+  &__text {
+    max-width: 45rem;
+    margin: 0 auto f.space(2);
+  }
+
+  &__icon {
+    display: block;
+    width: max-content;
+    margin: 0 auto;
+    font-size: f.rem(36);
+    color: v.$color-primary;
+  }
+
+  &__quote {
+    font-style: italic;
+    color: v.$color-primary;
+  }
+}
